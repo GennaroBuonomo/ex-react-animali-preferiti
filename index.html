@@ -9,9 +9,20 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+
+      const { useState } = React;
+
       const ListaAnimali = () => {
-        const animals = ['Leone', 'Tigre', 'Elefante', 'Giraffa', 'Panda', 'Delfino', 'Cane', 'Gatto', 'Lupo', 'Volpe']
+        const animalsChoices = ["Cane", "Gatto", "Pappagallo", "Cavallo", "Panda"];
+        const [animals, setAnimals] = useState([]);
+        
+        const addAnimal = () => {
+          math.floor(math.random() * animalsChoices.length)
+        }
+
         return (
+          <>
+          <button onclick={addAnimal} >Aggiungi un animale</button>
           <details>
             <summary>Animali</summary>
             <ul>
@@ -20,6 +31,7 @@
                ))}
             </ul>
           </details>
+          </>
         )
       }
     </script>
