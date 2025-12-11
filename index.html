@@ -46,7 +46,7 @@
         
         const addAnimal = () => {
           if(!animalName) return;
-          setAnimalName(curr => [...curr, animalName]);
+          setAnimals(curr => [...curr, animalName]);
           setAnimalName('');
           setShow(false);
         }
